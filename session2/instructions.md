@@ -18,7 +18,7 @@ Reference: [Arduino Pico Documentation](https://arduino-pico.readthedocs.io/en/l
 ## 3. Create Your First Sketch
 1. Open Arduino IDE  
 2. Go to **Tools → Board → Raspberry Pi Pico**  
-3. Open example sketch: **File → Examples → 01.Basics → Blink**
+3. Use code from ```code/step3.ino``` Open example sketch: **File → Examples → 01.Basics → Blink**
 
 ---
 
@@ -36,33 +36,49 @@ Reference: [Arduino Pico Documentation](https://arduino-pico.readthedocs.io/en/l
 2. Go to **Tools → Port → [select Raspberry Pi Pico port]**  
 3. Click **Upload (→)**  
 
----
-
 ## 6. Change Circuit to Flash an External LED
-- Reference Pico pins: [Raspberry Pi Pico Pinout](https://www.raspberrypi.com/documentation/microcontrollers/pico-series.html)  
+
+![LED Circuit](circuits/circuit1.jpg)
+
+### Step a: Calculate the Resistor Value
+- LEDs require a **current-limiting resistor** to prevent too much current flowing through them, which could **burn out the LED** or **damage the Pico pin**.  
 - **LED considerations:**  
-  - Long leg = positive (anode)  
   - Voltage ~2 V, current ~10 mA  
   - Pico pins operate at 3.3 V  
-  - Calculate appropriate resistor for the LED
+  - Calculate appropriate resistor for the LED  
 
-![LED Circuit](circuit/circuit1.jpg)
+### Step b: Update the Code
 
-- Edit sketch to define a pin and flash LED:
-  - Note, the pin number is the GP number, i.e. ```LEDPin = 0``` corresponds to pin ```GP0```
+- Reference Pico pins: [Raspberry Pi Pico Pinout](https://www.raspberrypi.com/documentation/microcontrollers/pico-series.html)  
+
+- Define a pin to control the LED in your sketch:  
 ```cpp
-const int LEDPin = 0; // change to chosen pin
+const int LEDPin = 0; // corresponds to GP0
 ````
-- Wire circuit and upload sketch
+- See ```code/step6.ino``` if needed
+
+---
+
+### Step c: Wire the Circuit
+
+* Connect the components using the Pico pins you looked up:
+
+  * **LED long leg is positive**
+
+* Upload the sketch, and the LED should blink.
 
 ---
 
 ## 7. Read Temperature with BME280
 
 1. Install library: **Tools → Manage Libraries → Adafruit BME280**
-2. Open example sketch: **File → Examples → Adafruit BME280 Library → bme280test**
+2. Open ```code/step7.ino``` or example sketch: **File → Examples → Adafruit BME280 Library → bme280test**
 3. Edit I2C address if needed (commonly `0x76`)
-4. Wire up the sensor (I2C0 default pins: GP4=SDA, GP5=SCL)
+4. Four pins are required
+  - Power
+  - Ground
+  - SDA
+  - SCL  
 5. Upload sketch as before
 6. Open **Serial Monitor** (top right) and set **baud rate to 9600**
 
@@ -74,21 +90,13 @@ const int LEDPin = 0; // change to chosen pin
 
   * If temperature exceeds 28 °C → turn on LED
   * Else → turn LED off
+* See ```code/step8.ino``` if needed
 
 ---
 
 ## 9. Final Improvement: Use a Transistor to Drive the LED
 
-* Use an **NPN transistor** (e.g., BC337) or **N-channel MOSFET**
-* LED + resistor → transistor collector/drain
-* Transistor emitter/source → GND
-* Pico GPIO → transistor base/gate through a resistor
+* Use an **NPN transistor** (e.g., BC337)
 * This allows the microcontroller to safely switch higher currents
 
----
-
-### ✅ Notes
-
-* Onboard Pico LED is **GP25**
-* Ensure common ground between Pico and transistor circuit
-* Double-check resistor sizing for LED current
+![LED Circuit](circuits/circuit2.jpg)
