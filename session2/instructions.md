@@ -32,7 +32,7 @@ Reference: [Arduino Pico Documentation](https://arduino-pico.readthedocs.io/en/l
 
 ## 5. Upload Sketch Normally (Second Time)
 - First-time upload is slightly different; subsequent uploads are standard:  
-1. Modify the sketch (e.g., change `delay(1000);` to `delay(50);`)  
+1. Modify the sketch (e.g., change `delay(1000);` to `delay(200);`)  
 2. Go to **Tools → Port → [select Raspberry Pi Pico port]**  
 3. Click **Upload (→)**  
 
@@ -45,6 +45,9 @@ Reference: [Arduino Pico Documentation](https://arduino-pico.readthedocs.io/en/l
   - Voltage ~2 V, current ~10 mA  
   - Pico pins operate at 3.3 V  
   - Calculate appropriate resistor for the LED
+
+![LED Circuit](circuit/circuit1.jpg)
+
 - Edit sketch to define a pin and flash LED:
   - Note, the pin number is the GP number, i.e. ```LEDPin = 0``` corresponds to pin ```GP0```
 ```cpp
