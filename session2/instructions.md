@@ -1,6 +1,6 @@
 # Session 2
 
-Reference: [Arduino Pico Documentation](https://arduino-pico.readthedocs.io/en/latest/)
+Reference: [Firebeetle 2 Board ESP32-C6 Microcontroller Wiki - DFRobot](https://wiki.dfrobot.com/SKU_DFR1075_FireBeetle_2_Board_ESP32_C6)
 
 ---
 
@@ -9,9 +9,9 @@ Reference: [Arduino Pico Documentation](https://arduino-pico.readthedocs.io/en/l
 
 ---
 
-## 2. Set up for Raspberry Pi Pico
-- Follow the instructions to add Pico support via Arduino Boards Manager:  
-  [Installing via Arduino Boards Manager](https://arduino-pico.readthedocs.io/en/latest/install.html#installing-via-arduino-boards-manager)
+## 2. Set up for our specific board
+- Follow the instructions to add Firebeetle 2 Board ESP32-C6:  
+  [Arduino IDE Configuration](https://wiki.dfrobot.com/SKU_DFR1075_FireBeetle_2_Board_ESP32_C6#Arduino%20IDE%20Configuration)
 
 ---
 
