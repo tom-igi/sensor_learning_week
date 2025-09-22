@@ -1,133 +1,151 @@
 ## 🌍 Environmental Sensors
 
 ### Temperature, Humidity & Pressure
-* **Temperature, humidity, and barometric pressure** — BME280 sensor.
-* **Temperature, humidity, pressure, and gas sensing** — BME688 (AI-based air quality, successor to BME280).
-* **Analog temperature** — HW-498 (Simple NTC/PTC thermistor-based module providing an analog voltage that varies with temperature; used for basic temperature measurement and monitoring).
-* **Digital temperature with threshold** — HW-503 (Thermistor-based temperature sensor module with digital output, threshold set via potentiometer; useful for on/off temperature-triggered control).
-* **Digital temperature and humidity** — HW-507 (DHT11) (calibrated output; widely used for basic indoor climate monitoring).
-* **Precise digital temperature** — DS18B20 (Dallas Temperature Sensor) (1-Wire temperature sensor providing precise temperature readings; commonly used in microcontroller projects).
-* **Precise digital temperature** — HW-506 (DS18B20 Temperature Sensor Module) (1-Wire temperature sensor module; provides precise temperature readings for IoT and microcontroller projects).
-* **Barometric pressure and temperature** — BMP180 (older, less accurate than BME280).
-
+* **Temperature, humidity, and barometric pressure** — BME280 — Combined digital sensor for temperature, humidity, and pressure.
+* **Temperature, humidity, pressure, and gas sensing** — BME688 — Successor to BME280 with AI-based air quality sensing.
+* **Analog temperature** — HW-498 — Thermistor-based module providing analog voltage output with temperature.
+* **Digital temperature with threshold** — HW-503 — Thermistor module with digital output, threshold adjustable by potentiometer.
+* **Digital temperature and humidity** — DHT11 (HW-507) — Basic calibrated sensor for indoor climate monitoring.
+* **Precise digital temperature** — DS18B20 — 1-Wire digital sensor for accurate temperature measurement.
+* **Precise digital temperature** — DS18B20 (HW-506) — Module version of DS18B20 with easy interfacing.
+* **Barometric pressure and temperature** — BMP180 — Older barometric and temperature sensor, less accurate than BME280.
 
 ### Light & Optical
-* **Digital light intensity** — GY-30 (BH1750) (lux meter).
-* **Ambient light intensity** — HW-486 (Photoresistor / Light Sensor Module) (detects ambient light intensity and outputs analog or digital signal; commonly used for light-sensitive projects like automatic lighting or light measurement).
+* **Digital light intensity** — BH1750 (GY-30) — I²C digital lux meter for ambient light measurement.
+* **Ambient light intensity** — HW-486 — Photoresistor-based module with analog/digital outputs for light detection.
+* **Color recognition** — TCS3200/TCS230 (GY-31) — Color sensor with frequency output proportional to detected RGB values.
+* **Ambient light sensing** — TEMT6000 — Analog light sensor mimicking human eye response.
+* **High-precision ambient light** — VEML7700 — I²C digital light sensor up to 120k lux with high resolution.
+* **Color sensing with IR filter** — TCS34725 — I²C RGB sensor with white LED and 16-bit digital output.
 
 ### Soil & Moisture
-* **Soil moisture** — HW-504 (soil moisture sensor).
+* **Soil moisture detection** — HW-504 — Simple soil moisture sensor module.
+* **Water level sensing** — Water Level Sensor Module — Detects liquid level with exposed PCB traces.
+* **Rain detection** — Raindrop Sensor Module — Detects raindrops or surface wetness.
+* **Water conductivity / TDS** — TDS Sensor Module — Analog output module for water quality and dissolved solids.
 
 ---
 
 ## 🧪 Gas & Air Quality Sensors
 
-* **Multi-gas detection** — MICS6814 (CO, NO₂, NH₃).
-* **High-performance CO₂ sensing** — COZIR-AX-5000 (NDIR-based).
-* **Infrared flame detection** — HW-491 (detects flames by sensing IR light 760–1100 nm; adjustable sensitivity, analog/digital outputs, commonly used in fire detection and safety monitoring projects).
+* **Multi-gas detection** — MICS6814 — Detects CO, NO₂, and NH₃ gases.
+* **High-performance CO₂ sensing** — COZIR-AX-5000 — NDIR-based CO₂ sensor.
+* **Infrared flame detection** — HW-491 — IR flame sensor (760–1100 nm) with adjustable sensitivity.
+* **Smoke and combustible gas detection** — MQ-2 — Sensitive to smoke, propane, methane, hydrogen.
+* **Alcohol vapor detection** — MQ-3 — Detects ethanol, methanol, and alcohol vapors.
+* **Methane gas detection** — MQ-4 — Detects methane (CH₄), used in gas leak monitoring.
+* **LPG / natural gas detection** — MQ-5 — Sensitive to LPG, natural gas, and coal gas.
+* **Isobutane/propane detection** — MQ-6 — Detects LPG, isobutane, and propane gases.
+* **Carbon monoxide detection** — MQ-7 — Detects CO; requires heating cycle for accuracy.
+* **Hydrogen detection** — MQ-8 — Detects hydrogen (H₂) for industrial safety applications.
+* **Carbon monoxide & combustible gas** — MQ-9 — Dual sensor for CO and flammable gases.
+* **Air quality detection** — MQ-135 — Detects ammonia, NOₓ, alcohol, benzene, smoke, CO₂.
+* **VOC air quality sensing** — SGP40 (GY-SGP40) — I²C gas sensor providing raw VOC index.
+* **Air quality + temp/humidity** — ENS160 + AHT21 — Combined eCO₂, TVOC, temperature, and humidity sensor.
 
 ---
 
 ## 📡 Distance & Proximity Sensors
 
 ### Ultrasonic Distance
-* **Ultrasonic distance** — HC-SR04 (popular in robotics).
-* **Waterproof ultrasonic distance** — JSN-SR04T-V3.0.
-* **High-quality ultrasonic distance** — LV-MaxSonar-EZ (with better noise filtering).
+* **Ultrasonic ranging** — HC-SR04 — Common ultrasonic distance sensor for robotics.
+* **Waterproof ultrasonic ranging** — JSN-SR04T-V3.0 — Waterproof ultrasonic distance sensor.
+* **High-quality ultrasonic ranging** — LV-MaxSonar-EZ — Ultrasonic sensor with improved noise filtering.
 
 ### Laser & Time-of-Flight
-* **Time-of-flight laser distance** — VL53L1X (ToF laser distance sensor).
-* **Laser beam emission** — HW-493 (Low-power red laser module emitting focused beam; can be used for basic signaling, alignment, or obstacle detection when combined with a photodetector).
+* **Laser distance sensing** — VL53L1X — Time-of-flight laser sensor for short-range distance.
+* **Laser beam emission** — HW-493 — Low-power red laser module for alignment or detection.
 
 ### Infrared & Optical Detection
-* **Line tracking detection** — HW-511 (TCRT5000) (infrared reflective sensor module used for line tracking in robotics, detects black/white contrast on surfaces).
-* **Infrared obstacle detection** — IRDA (emits infrared light and detects reflections from nearby objects; adjustable transmitter strength and receiver sensitivity, commonly used for obstacle detection in robotics).
-* **Light beam interruption** — HW-487 (U-shaped optical sensor that detects objects breaking the light beam, outputting digital high signal when blocked; commonly used for object detection or counting).
-* **Infrared light transmission** — HW-489 (emits infrared light for communication or obstacle detection; can be paired with an IR receiver for sensing or remote control applications).
+* **Line tracking** — TCRT5000 (HW-511) — Reflective IR sensor for line following.
+* **Infrared obstacle detection** — IRDA — IR emitter/receiver pair for proximity detection.
+* **Light beam interruption** — HW-487 — U-shaped optical sensor detecting object passage.
+* **Infrared transmission** — HW-489 — IR LED module for communication or detection.
 
 ---
 
 ## 🎮 Motion & Position Sensors
 
 ### Inertial Measurement
-* **9-axis motion sensing** — MPU-9250 / MPU-6500 (accelerometer, gyroscope, magnetometer).
+* **9-axis motion sensing** — MPU-9250 / MPU-6500 — Accelerometer, gyroscope, and magnetometer IMUs.
 
 ### Tilt & Orientation
-* **Tilt demonstration** — HW-499 (KY-027 Magic Light Cup) (pair of modules with LED and mercury tilt switch; tilting simulates "pouring" light from one module to another, useful for motion/tilt demonstrations).
-* **Tilt switch activation** — HW-501 (KY-020 Tilt Switch Module) (tilt-activated switch that closes when tilted, providing digital signal; commonly used for orientation or motion detection).
-* **Mercury tilt switching** — HW-505 (Mercury Tilt Switch Module) (tilt-activated switch containing mercury; closes or opens circuit depending on orientation, used for motion detection or orientation sensing).
+* **Tilt demo module** — KY-027 (HW-499) — Magic Light Cup with LED and tilt switch.
+* **Tilt switch** — KY-020 (HW-501) — Digital tilt-activated switch.
+* **Mercury tilt switch** — HW-505 — Tilt switch with mercury contact.
 
 ### Magnetic Field Detection
-* **Linear magnetic field strength** — HW-509 (Linear Hall Sensor) (analog Hall effect sensor that outputs voltage proportional to magnetic field strength; used for position, proximity, or current sensing).
-* **Magnetic field presence** — HW-495 (Hall Magnetic Module) (detects magnetic fields and outputs digital signal; used for position, proximity, or current sensing applications).
-* **Analog magnetic field strength** — HW-492 (Analog Hall Sensor) (outputs voltage proportional to magnetic field strength; used for position, proximity, or current sensing).
-* **Magnetic proximity switching** — HW-484 (Reed Switch Module) (magnetic switch that closes or opens in presence of magnet; used for position sensing, door/window monitoring, and magnetic triggers).
-* **Magnetic reed switching** — HW-497 (KY-021 Magnetic Reed Switch Module) (normally open magnetic switch that closes in presence of magnet, providing digital output for position or proximity detection).
+* **Linear Hall effect sensing** — HW-509 — Analog Hall sensor for magnetic field strength.
+* **Magnetic field presence** — HW-495 — Digital Hall effect sensor for magnetic detection.
+* **Analog Hall effect sensing** — HW-492 — Analog magnetic field output module.
+* **Magnetic reed switch** — HW-484 — Reed switch for magnetic proximity detection.
+* **Magnetic reed switch** — KY-021 (HW-497) — Normally open reed switch module.
 
 ### Impact & Vibration
-* **Tap/knock detection** — HW-500 (Tap / Knock Sensor Module) (detects taps or knocks and outputs digital signal; can function as momentary switch for triggering actions).
-* **Shock/vibration detection** — HW-513 (Shock / Vibration Sensor Module) (detects vibrations or shocks and outputs digital signal when triggered; used for impact detection, security, or motion sensing projects).
+* **Tap/knock detection** — HW-500 — Digital knock/tap sensor module.
+* **Shock/vibration detection** — HW-513 — Digital sensor for vibration or impact detection.
 
 ### Rotational Position
-* **Rotary position encoding** — HW-040 (Rotary Encoder) (rotary input device that outputs pulses corresponding to rotation direction and amount; often includes push button for reset, used for position tracking or user input).
+* **Rotary encoder** — HW-040 — Incremental rotary encoder with push button.
 
 ---
 
 ## 📺 Displays & Indicators
 
-* **LED matrix display** — LED screen (general LED matrix/screen for displaying text/numbers).
-* **Small OLED display** — 0.91" OLED (I²C OLED display, usually 128×32 pixels).
-* **RGB color mixing** — HW-478 (SMD RGB LED) (surface-mount RGB LED containing red, green, and blue diodes; allows color mixing for visual indicators and display effects).
-* **Two-color indication** — HW-477 (Two-Color Common Cathode RGB LED Module) (LED module with red and green diodes sharing common cathode; allows basic two-color visual indication).
-* **RGB color effects** — HW-479 (RGB LED Module) (module containing red, green, and blue LEDs; allows color mixing for visual effects, indicators, and simple displays).
-* **Green/red indication** — HW-480 (Two-Color Common Cathode GR LED Module) (LED module with green and red diodes sharing common cathode; used for basic two-color visual indication).
-* **Automatic color cycling** — HW-481 (7-Color Flashing LED Module) (pre-programmed LED module that automatically cycles through seven colors; used for visual effects and decorative lighting without additional programming).
+* **LED matrix display** — Generic — LED matrix/screen for text and numbers.
+* **Small OLED display** — 0.91" OLED — I²C OLED display, 128×32 pixels.
+* **RGB SMD LED** — HW-478 — Surface-mount RGB LED for color mixing.
+* **Two-color LED** — HW-477 — Red/green common cathode LED module.
+* **RGB LED module** — HW-479 — Basic RGB LED module for indicators and effects.
+* **Two-color LED** — HW-480 — Red/green common cathode LED module.
+* **Flashing 7-color LED** — HW-481 — Auto-cycling 7-color LED for effects.
 
 ---
 
 ## ⚡ Power Management / Converters
 
-* **Lithium battery charging** — TP5100 (1S/2S Li-ion charger module).
-* **Voltage boost conversion** — 3.7 V → 5 V converter (boost converter, often used for powering 5 V systems from Li-ion batteries).
-* **RTC backup power** — CR1220 (coin cell battery, often used for RTC backup).
+* **Li-ion battery charging** — TP5100 — Charger for 1S/2S Li-ion cells.
+* **Boost converter** — 3.7 V → 5 V converter — Step-up converter for powering 5 V devices.
+* **RTC backup power** — CR1220 — Coin cell battery for RTC modules.
+* **Current sensor** — INA219 — I²C high-side current, voltage, and power monitor.
 
 ---
 
 ## 📡 RF / Wireless Modules
 
-* **433 MHz RF reception** — MX-RM-5V (superheterodyne RF receiver).
-* **433 MHz RF transmission** — FS1000A (RF transmitter module, often paired with MX-RM-5V).
-* **Cellular communication** — SIM800L (GSM/GPRS module).
-* **Infrared signal reception** — HW-490 (IR Receiver Module) (compatible with IR transmitters or remote controls; used for wireless control of microcontrollers and electronics projects).
+* **433 MHz RF receiver** — MX-RM-5V — Superheterodyne 433 MHz RF receiver module.
+* **433 MHz RF transmitter** — FS1000A — 433 MHz RF transmitter, often paired with MX-RM-5V.
+* **Cellular communication** — SIM800L — GSM/GPRS module for cellular connectivity.
+* **Infrared receiver** — HW-490 — IR receiver for remote control signals.
 
 ---
 
 ## 🔊 Sound & Alert Modules
 
-* **High-decibel alarm** — HW-508 (95dB Alarm Buzzer) (3–24 V electronic buzzer capable of continuous or intermittent beep, used for alarms and alerts).
-* **Sound detection** — HW-496 (Small Sound Sensor) (compact microphone-based sensor with analog and digital outputs; commonly used for clap detection and sound-activated control).
-* **Loud sound detection** — HW-485 (Large Sound Sensor) (larger microphone-based sensor with analog and digital outputs; suitable for detecting louder sounds or for use in sound-activated projects).
-* **Active buzzer tone** — HW-512 (KY-012 Active Buzzer Module) (produces single-tone sound when triggered by high signal; used for alarms, notifications, and audio feedback).
+* **Alarm buzzer** — HW-508 — 95 dB buzzer module, 3–24 V operation.
+* **Small sound sensor** — HW-496 — Microphone module with analog and digital outputs.
+* **Large sound sensor** — HW-485 — Microphone module for detecting louder sounds.
+* **Active buzzer** — KY-012 (HW-512) — Single-tone buzzer activated by digital input.
 
 ---
 
 ## 👆 User Input / Switches
 
-* **Tactile button input** — HW-483 (Push Button) (simple tactile push-button switch used for user input or control in electronic circuits).
-* **Capacitive touch detection** — HW-494 (Touch Sensor Module) (outputs signal when touched by finger or conductive object; used for touch-activated control).
+* **Push button** — HW-483 — Tactile push-button input module.
+* **Touch sensor** — HW-494 — Capacitive touch detection module.
 
 ---
 
 ## 🔧 Miscellaneous
 
 ### Imaging & Vision
-* **Image capture and streaming** — ESP32-CAM (ESP32 microcontroller with built-in camera module).
+* **Camera module** — ESP32-CAM — ESP32 with integrated camera for image capture.
 
 ### Identification / Security
-* **RFID tag reading/writing** — RFID-RC522 (13.56 MHz RFID module).
+* **RFID reader/writer** — RC522 — 13.56 MHz RFID module.
 
 ### Motors & Drivers
-* **Stepper motor control** — Stepper motor driver (driver module to control stepper motors, exact model needed).
+* **Stepper motor driver** — Generic — Module for controlling stepper motors.
 
 ### Biomedical / Physiological
-* **Heart rate monitoring** — HW-502 (Heartbeat / Finger Pulse Sensor) (optical sensor that detects pulse rate by measuring blood flow through fingertip; used for heart rate monitoring and health projects).
+* **Heartbeat sensor** — HW-502 — Optical pulse sensor for heart rate monitoring.
