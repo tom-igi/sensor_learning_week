@@ -12,7 +12,7 @@ Reference: [Firebeetle 2 Board ESP32-C6 Microcontroller Wiki - DFRobot](https://
 ## 2. Set up for our specific board
 - Follow the instructions to add Firebeetle 2 Board ESP32-C6:  
   [Arduino IDE Configuration](https://wiki.dfrobot.com/SKU_DFR1075_FireBeetle_2_Board_ESP32_C6#Arduino%20IDE%20Configuration)
-- Go to step 8.
+- Stop after completing step 8.
 
 ---
 
